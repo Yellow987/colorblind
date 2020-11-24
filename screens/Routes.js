@@ -1,17 +1,21 @@
 import Home from './Home/index.js';
+import Game from "./Game";
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-const AppNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: Home
+const StackNavigator = createStackNavigator(
+    {
+      Home: {
+        screen: Home
+      },
+      Game: {
+        screen: Game
+      }
+    },
+    {
+        initialRouteName: "Home",
+        headerMode: "none",
     }
-  },
-  {
-    initialRouteName: "Home",
-    headerMode: "none",
-  }
- );
+    );
 
-export default createAppContainer(AppNavigator);
+export default createAppContainer(StackNavigator);

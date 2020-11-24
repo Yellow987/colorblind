@@ -11,7 +11,7 @@ export default class Home extends Component {
 
 
     onPlayPress = () => {
-        console.log("onPlayPress event handler");
+        this.props.navigation.navigate('Game');
     };
 
     onLeaderboardPress = () => {
@@ -36,7 +36,7 @@ export default class Home extends Component {
                 </TouchableOpacity>  
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
                     <Image source={require("../../assets/icons/trophy.png")} style={styles.trophyIcon}/>
-                    <Text style={styles.hiscore}>Hi-score: 0</Text>
+                    <Text style={styles.hiscore}>Hi-score: 10</Text>
                 </View>
                 <TouchableOpacity onPress={this.onLeaderboardPress} 
                 style={{ flexDirection: 'row', alignItems: 'center', marginTop: 20 }}>
